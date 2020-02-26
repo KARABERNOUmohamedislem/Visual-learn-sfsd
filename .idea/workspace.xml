@@ -36,6 +36,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -50,7 +51,11 @@
       <option name="presentableId" value="Default" />
       <updated>1582657119088</updated>
       <workItem from="1582657138027" duration="12770000" />
+<<<<<<< HEAD
       <workItem from="1582703548082" duration="75000" />
+=======
+      <workItem from="1582703826225" duration="3601000" />
+>>>>>>> animation
     </task>
     <servers />
   </component>

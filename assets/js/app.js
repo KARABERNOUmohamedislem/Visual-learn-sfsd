@@ -86,7 +86,7 @@ TObVCb.prototype={
     insertion:function (cle,enreg) {
       let e;
       let buf;
-      let t=enreg.length+3;
+      let t=(enreg.length)+3;
       e=new TenregTObVCb(t,0,cle,enreg);
       let i=0,nb=this.entete(1),insere=false,taillemax=this.entete(2);
       while (i<=nb && !insere)
@@ -97,7 +97,7 @@ TObVCb.prototype={
          }
          if ((taillemax - buf.derniercasevide)>=t){
             this.insererenreg(e,buf);
-            buf.derniercasevide+= t;
+            buf.derniercasevide= buf.tab.length;
             insere=true;
             this.ecriredir(i,buf);
          }
@@ -109,7 +109,7 @@ TObVCb.prototype={
           let n=this.alloc_bloc();
           buf=new TblocTObVCb([],0,0);
           this.insererenreg(e,buf);
-          buf.derniercasevide=t-1;
+          buf.derniercasevide=t;
           this.aff_entete(1,nb+1);
           this.ecriredir(n,buf);
       }
@@ -135,6 +135,7 @@ TObVCb.prototype={
                 let taille=buf.tab[j];
                 let eff=buf.tab[j+1];
                 let kle=buf.tab[j+2];
+                console.log('lklkl');
                 if ((kle==cle) && (!eff)){
                     trouv=true;
                 }
