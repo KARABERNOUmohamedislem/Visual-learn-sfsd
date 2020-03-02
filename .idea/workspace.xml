@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a9ebaec-72b0-4ebb-b267-9103679bba60" name="Default Changelist" comment="" />
+    <list default="true" id="0a9ebaec-72b0-4ebb-b267-9103679bba60" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +53,8 @@
       <updated>1582657119088</updated>
       <workItem from="1582657138027" duration="12770000" />
       <workItem from="1582703826225" duration="3601000" />
+      <workItem from="1582708385651" duration="299000" />
+      <workItem from="1582756311847" duration="55850000" />
     </task>
     <servers />
   </component>
@@ -55,6 +62,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="306" y="0" key="CommitChangelistDialog2" timestamp="1582890138107">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="306" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582890138107" />
     <state x="9" y="20" width="998" height="708" key="SettingsEditor" timestamp="1582668675719">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
