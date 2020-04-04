@@ -3,7 +3,7 @@ function sleep(delay) {
     return new Promise(resolve => {
         setTimeout(() => {
             resolve('resolved');
-        }, delay);
+        }, speed*delay);
     });
 }
 
@@ -11,7 +11,7 @@ function sleep(delay) {
 function EnteteTObVCb(nb,taillemax) {
     this.NB=nb;
     this.TailleMax=taillemax;
-    let a=((250-2*taillemax-2)/taillemax);
+
 
 }
 
@@ -68,7 +68,7 @@ animations.prototype={
            targets:document.getElementById('block'+(nmrdublock+1)),
            translateY:200,
            translateX:0,
-          duration:1000,
+          duration:1000*speed,
           easing:'linear'
        });
   },
@@ -77,7 +77,7 @@ animations.prototype={
           targets:document.getElementById('block'+(nmrdublock+1)),
           translateY:20,
           translateX: 0,
-          duration:1000,
+          duration:1000*speed,
           easing: 'linear'
       });
   },
@@ -85,11 +85,11 @@ animations.prototype={
       let remplacent=document.getElementById('block'+(nmrDuBlockRemplacent+1));
       anime({
           targets:remplacent,
-          translateY:[{value:200,duration:500},
-              {value: 20,duration: 500}
+          translateY:[{value:200,duration:500*speed},
+              {value: 20,duration: 500*speed}
           ],
-          translateX:[{value:(270*(nmrdublockARemplacer-nmrDuBlockRemplacent)),duration:500},
-              {value:(270*(nmrdublockARemplacer-nmrDuBlockRemplacent)),duration:500}
+          translateX:[{value:(270*(nmrdublockARemplacer-nmrDuBlockRemplacent)),duration:500*speed},
+              {value:(270*(nmrdublockARemplacer-nmrDuBlockRemplacent)),duration:500*speed}
           ]
 
       });
@@ -98,13 +98,13 @@ animations.prototype={
         let a=document.getElementById('enreg'+(nmrEnreg+1)+'block'+(nmrDuBlock+1));
         anime({
             targets:a,
-            width:[{value:21 ,duration:500},
+            width:[{value:21 ,duration:500*speed},
                 {value: 20}
             ],
-            height:[{value:21,duration:500},
+            height:[{value:21,duration:500*speed},
                 {value: 20}],
             backgroundColor:[{value:color,
-            duration:500,},
+            duration:500*speed,},
                 {
                     value: '#ffffff'
                 }]
@@ -374,6 +374,7 @@ TObVCb.prototype={
                       easing:'linear',
                       duration:0
                   });
+                  // document.getElementById('block'+(i+1)).style.translate='0';
                   document.getElementById('casevide'+(nb+1)).id='casevide'+(i+1);
 
                   this.aff_entete(1,nb-1);
@@ -412,10 +413,11 @@ var entetee =new EnteteTObVCb(-1,10);
 var fichier=new TObVCb([],entetee,'test');
 var initialiseee=false;
 // fichier.initialisation(3);
+
  function init() {
     if (!initialiseee) {
         let a = prompt('le nombre d elemnt a inserer');
-        fichier.initialisation(3);
+        fichier.initialisation(a);
         initialiseee=true;
     }
     else{
@@ -453,9 +455,30 @@ function supp() {
     }
 
 }
+var speed;
+ function getspeed(){
+     speed=(document.getElementById('speed').value)/100;
+     requestAnimationFrame(getspeed);
+ }
+
+ getspeed();
+ var up=false;
+ function upDown(){
+     if (up){
+         document.getElementById('algo').style.display='none';
+         up=false;
+     }
+     else{
+         document.getElementById('algo').style.display='block';
+
+
+         up=true;
+     }
+ }
+
 
 document.getElementById('inserer').onclick=insere;
 document.getElementById('rechercher').onclick=rech;
 document.getElementById('supprimer').onclick=supp;
 document.getElementById('initialiser').onclick=init;
-
+document.getElementById('up').onclick=upDown;
